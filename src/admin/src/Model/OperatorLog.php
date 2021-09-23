@@ -8,7 +8,7 @@ class OperatorLog extends BaseModel
 {
     protected $table = 'operator_log';
 
-    protected $connection = 'hyperf_admin';
+    public $connection = 'hyperf_admin';
 
     protected $fillable = [
         'page_url',

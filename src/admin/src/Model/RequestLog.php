@@ -10,7 +10,7 @@ class RequestLog extends BaseModel
 
     const UPDATED_AT = 'updated_at';
 
-    protected $connection = 'hyperf_admin';
+    public $connection = 'hyperf_admin';
 
     protected $table = 'request_log';
 
