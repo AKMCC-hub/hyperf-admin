@@ -6,7 +6,9 @@ use Hyperf\Utils\Arr;
 use Hyperf\Utils\Str;
 use HyperfAdmin\BaseUtils\Constants\ErrorCode;
 use HyperfAdmin\BaseUtils\Model\BaseModel;
+use HyperfAdmin\BaseUtils\Model\CkBaseModel;
 use HyperfAdmin\BaseUtils\Model\EsBaseModel;
+use HyperfAdmin\BaseUtils\Scaffold\Entity\CkEntityAbstract;
 use HyperfAdmin\BaseUtils\Scaffold\Entity\EsEntityAbstract;
 use HyperfAdmin\BaseUtils\Scaffold\Entity\MysqlEntityAbstract;
 
@@ -1275,6 +1277,10 @@ abstract class AbstractController extends Controller
         }
         if ($this->model_class && make($this->model_class) instanceof EsBaseModel) {
             return new class ($this->model_class) extends EsEntityAbstract{
+            };
+        }
+        if ($this->model_class && make($this->model_class) instanceof CkBaseModel) {
+            return new class ($this->model_class) extends CkEntityAbstract {
             };
         }
         return null;
