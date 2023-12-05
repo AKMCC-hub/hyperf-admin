@@ -82,7 +82,7 @@ class CkBaseModel
         $client = new Client($serverProvider);
         $builder = new Builder($client);
 
-//        $builder->select('stId');
+//        $builder->select('st_id');
 //        $builder->from($this->table);
 //        $rows = $builder->get();
 //        $this->logger->info($builder->toSql());
