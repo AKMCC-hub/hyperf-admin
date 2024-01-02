@@ -280,6 +280,19 @@ class EsBaseModel
             return false;
         }
     }
+    public function delete($id)
+    {
+        $params = [
+            'index' => $this->index,
+            'type' => $this->type ?: $this->index,
+            'id' => $id,
+        ];
+        try {
+            return $this->client->delete($params);
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
 
     public function updateById($id, $doc)
     {
