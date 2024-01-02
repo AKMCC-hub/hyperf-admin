@@ -8,7 +8,7 @@ use HyperfAdmin\BaseUtils\Log;
 
 class EsBaseModel
 {
-    protected $client;
+    public $client;
 
     public $connection = 'default';
 
