@@ -8,6 +8,8 @@ use HyperfAdmin\BaseUtils\Log;
 
 class EsBaseModel
 {
+    public $client;
+
     public $connection = 'default';
 
     public $index;
